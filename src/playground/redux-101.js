@@ -15,10 +15,6 @@ const countReset = ({ }) => ({
     count: 0
 })
 
-// Reducers
-// Reducers are pure functions
-// Never change state or action
-
 const countReducer = (state = { count: 0 }, action) => {
     switch (action.type) {
         case 'INCREMENT':
@@ -48,14 +44,6 @@ const unsubscribe = store.subscribe(() => {
     console.log(store.getState());
 });
 
-// store.dispatch({
-//     type: 'INCREMENT',
-//     incrementBy: 5
-// });
-
-// store.dispatch({
-//     type: 'INCREMENT'
-// });
 
 store.dispatch(incrementCount({ incrementBy: 5 }))
 store.dispatch(incrementCount())
@@ -66,10 +54,6 @@ store.dispatch(decrementCount());
 
 store.dispatch(decrementCount({ decrementBy: 10 }));
 
-// store.dispatch({
-//     type: 'DECREMENT',
-//     decrementBy: 10
-// });
 
 store.dispatch({
     type: 'SET',
